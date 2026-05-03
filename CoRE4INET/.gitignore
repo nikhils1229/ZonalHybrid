@@ -1,0 +1,54 @@
+# generated files
+.settings/
+*_m.h
+*_m.cc
+/src/Makefile
+/src/Makefile.vc
+/doc/doxy
+/doc/neddoc
+/doc/index.html
+/FeatureBuildTest
+
+# settings
+*.qtenvrc
+*.tkenvrc
+*.tkenvlog
+*.cmdenv-log
+
+# results
+/examples/*/results/
+/examples/*/*/results/
+/examples/*/*/*/results/
+*.vci
+*.vec
+*.sca
+*.anf
+
+# tests
+/tests/*/work/
+
+# binary files
+/out
+*.so
+*.dylib
+*.dll
+*.def
+*.a
+*.lib
+*.exe
+*.o
+*.obj
+
+# local files not to be committed
+.oppfeaturestate
+.nedexclusions
+src/core4inet/features.h
+
+# backup and temp files
+*.tmp*
+
+# apple files
+.DS_Store
+
+#ignore VSCODE files
+.vscode*

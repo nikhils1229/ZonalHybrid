@@ -1,0 +1,10 @@
+Demonstrates a small IEEE 802.1Q Network. Traffic generators send Ethernet frames directly.
+
+- The small network contains three hosts (node1, node2, node3) and a switch, which 
+  connects these hosts.
+
+- Node1 sends messages in vlan 1 with priority 1 to node3.
+
+- Node2 sends messages in vlan 0 with priority 7 to node3.
+
+- Background cross traffic may be send between nodes. Use the configuration With_Crosstraffic.

@@ -1,0 +1,9 @@
+out/
+results/
+*.o
+*.so
+*.a
+*.d
+.cmdenv-log
+.qtenvrc
+MultiProtocol_Gateway/MultiProtocol_Gateway
