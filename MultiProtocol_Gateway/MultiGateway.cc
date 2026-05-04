@@ -161,7 +161,10 @@ void MultiGateway::processLinFrame(cMessage *msg) {
   LinResponse *rsp = dynamic_cast<LinResponse *>(msg);
   if (rsp) {
       EV << "Received LIN Response (ID: 0x" << std::hex << rsp->getFrameId() << std::dec << ")\n";
-      std::vector<uint8_t> payload = {0x11, 0x22};
+      std::vector<uint8_t> payload;
+      for (int i = 0; i < rsp->getDataLength(); i++) {
+          payload.push_back(rsp->getData(i));
+      }
       packToEth(0, payload);
   }
   delete msg;

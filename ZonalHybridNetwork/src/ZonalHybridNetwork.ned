@@ -57,7 +57,7 @@ network ZonalHybridNetwork
         // ==========================================
         // ZONE 4: LIN (Expanded Slaves)
         // ==========================================
-        LIN_Master: LinBus { @display("p=600,120;i=block/network,purple"); }
+        LIN_Bus: LinBus { @display("p=600,120;i=block/network,purple"); }
         LIN_Slave_A: LinNode { @display("p=750,60;i=device/device,purple"); }
         LIN_Slave_B: LinNode { @display("p=780,120;i=device/device,purple"); }
         LIN_Slave_C: LinNode { @display("p=750,180;i=device/device,purple"); }
@@ -109,9 +109,9 @@ network ZonalHybridNetwork
         Gateway_3.ethg[3] <--> cable <--> Central_Switch.ethg++;
 
         // Zone 4: Expanded LIN Master-Slave connections
-        LIN_Master.gate++ <--> LIN_Slave_A.gate;
-        LIN_Master.gate++ <--> LIN_Slave_B.gate;
-        LIN_Master.gate++ <--> LIN_Slave_C.gate;
-        LIN_Master.gate++ <--> Gateway_4.linPort[0];
+        LIN_Bus.gate++ <--> LIN_Slave_A.gate;
+        LIN_Bus.gate++ <--> LIN_Slave_B.gate;
+        LIN_Bus.gate++ <--> LIN_Slave_C.gate;
+        LIN_Bus.gate++ <--> Gateway_4.linPort[0];
         Gateway_4.ethg[0] <--> cable <--> Central_Switch.ethg++;
 }
