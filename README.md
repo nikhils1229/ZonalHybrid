@@ -64,10 +64,4 @@ opp_run -u Cmdenv -c General -n .:../inet/src:../FiCo4OMNeT/src:../CoRE4INET/src
 Detailed traces of every frame transition are stored in the compressed `simulation_logs.zip`.
 
 ---
-
-## 🔬 Critical Findings & Roadmap
-- **TSN Readiness**: While current simulations use standard Ethernet, the architecture is compatible with CoRE4INET's TSN modules (802.1Qbv/Qci).
-- **Reordering Risk**: The gateway uses a `std::priority_queue` for fragments; under extreme load, this may require a stable queue wrapper to prevent out-of-order delivery.
-
----
 *Developed as part of the Zonal Hybrid Network Architecture Research.*
